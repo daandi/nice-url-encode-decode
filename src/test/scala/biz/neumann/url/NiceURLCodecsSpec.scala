@@ -15,7 +15,12 @@ class NiceURLCodecsSpec extends FunSpec with Matchers{
     EncodedDecoded("",""),
     EncodedDecoded("%20"," "),
     EncodedDecoded("%C3%9Co","Üo"),
-    EncodedDecoded("playa%20de%20palma","playa de palma")
+    EncodedDecoded("B%C3%B6hmerwald", "Böhmerwald"),
+    EncodedDecoded("%C3%84%C3%96%C3%9C%C3%A4%C3%B6%C3%BC%C3%9F%25%3F%C3%A9%C3%A8%C3%A2%C3%82", "ÄÖÜäöüß%?éèâÂ"),
+    EncodedDecoded("playa%20de%20palma","playa de palma"),
+    EncodedDecoded("%CB%88bal%C9%90%CB%8Cman", "ˈbalɐˌman"),
+    EncodedDecoded("%E1%BC%9C%CF%81%CF%89%CF%82", "Ἔρως")
+
   )
 
   describe("The nice URL Decoder") {
