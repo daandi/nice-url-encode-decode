@@ -2,6 +2,9 @@
 
 This library wants to put back the fun in working with URL-Encoded Strings.
 
+# State
+https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
+
 # Adding to your project
 
 # Remarks
