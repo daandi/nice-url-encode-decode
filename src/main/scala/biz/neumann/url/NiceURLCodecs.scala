@@ -12,19 +12,19 @@ import scala.util.matching.Regex
   */
 object NiceURLCodecs {
 
-  val utf8: String = "utf-8"
+  implicit val utf8: String = "utf-8"
   val whitespacePlus: Regex = "\\+".r
   val whiteSpaceEscape: String = "%20"
 
   implicit class UnencodedURLString(val unencoded: String) extends AnyVal{
-    def encode =  NiceURLCodecs.URLEncodedString(
-      whitespacePlus replaceAllIn( URLEncoder.encode(unencoded, utf8), whiteSpaceEscape)
+    def encode(implicit encoding: String) =  NiceURLCodecs.URLEncodedString(
+      whitespacePlus replaceAllIn( URLEncoder.encode(unencoded, encoding), whiteSpaceEscape)
     )
     override def toString = encode
   }
 
   implicit class URLEncodedString(val encodedString: String) extends AnyVal{
-    def decode: String = URLDecoder.decode(encodedString, utf8)
+    def decode(implicit encoding: String): String = URLDecoder.decode(encodedString, encoding)
     override def toString = decode
   }
 
