@@ -6,16 +6,18 @@ This library wants to put back the fun in working with URL-Encoded Strings.
 
 # Remarks
 
+* The `Pimp my library` pattern is use to make this extension possible. It is implemented using `value classes` to keep the overhead low.
 * The library is biased towards using `%20` to escape ` ` instead of `+`.
 * The library is biased towards `utf-8`. You can circumvent this though by supplying a different Encoding though as implicit parameter.
 
+
 # Usage
-Just import the implicits to get the pimped strings:
+Import the implicits to get your strings pimped:
 
 ```scala
 scala> import biz.neumann.url.NiceURLCodecs._
 import biz.neumann.url.NiceURLCodecs._
-``
+```
 
 ## Encoding
 
