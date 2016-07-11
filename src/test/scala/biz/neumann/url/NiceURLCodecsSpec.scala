@@ -47,5 +47,14 @@ class NiceURLCodecsSpec extends FunSpec with Matchers{
     }
   }
 
+  describe("toString methods") {
+    it("returns the encoded string in the toString for 'URLEncodedString'") {
+      "München".encode.toString should be("M%C3%BCnchen")
+    }
+    it("returns the decoded string in the toString for 'DecodedURLString'") {
+      "M%C3%BCnchen".decode.toString should be("München")
+    }
+  }
+
 }
 
