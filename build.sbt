@@ -1,4 +1,4 @@
-name := """niceurl-encode-decode"""
+name := """nice-url-encode-decode""".stripMargin
 
 version := "1.0"
 
