@@ -3,7 +3,11 @@
 This library wants to put back the fun in working with URL-Encoded Strings.
 
 # State
-https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
+
+[![Codeship](https://codeship.com/projects/68fa7440-298a-0134-be9b-0ae2ebcae286/status?branch=master)](https://codeship.com/projects/162626/status?branch=master)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/777d4db9b275411881fadaba9c7da222)](https://www.codacy.com/app/andreas-neumann/nice-url-encode-decode)
+
 
 # Adding to your project
 
