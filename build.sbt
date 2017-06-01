@@ -1,10 +1,12 @@
 name := "nice-url-encode-decode"
 
-version := "1.4"
+version := "1.5"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.2"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+crossScalaVersions := Seq("2.11.8", "2.12.2")
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.3" % "test"
 
 sonatypeProfileName := "biz.neumann"
 
