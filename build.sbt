@@ -2,9 +2,9 @@ name := "nice-url-encode-decode"
 
 version := "1.5"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.1"
 
-crossScalaVersions := Seq("2.11.8", "2.12.2")
+crossScalaVersions := Seq("2.11.8", "2.12.1")
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.3" % "test"
 
