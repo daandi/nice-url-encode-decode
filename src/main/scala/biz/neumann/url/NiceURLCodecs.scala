@@ -6,9 +6,7 @@ import scala.util.matching.Regex
 
 /**
   * Andreas Neumann
-  * Email: andreas@neumann.biz
   * Date: 08.07.16
-  * Time: 13:22
   */
 object NiceURLCodecs {
 
@@ -17,17 +15,16 @@ object NiceURLCodecs {
   val whiteSpaceEscape: String = "%20"
 
   implicit class DecodedURLString(val unencoded: String) extends AnyVal{
-    def encode(implicit encoding: String) =  NiceURLCodecs.URLEncodedString(
-      whitespacePlus replaceAllIn( URLEncoder.encode(unencoded, encoding), whiteSpaceEscape)
+    def encode(implicit encoding: String): URLEncodedString =  NiceURLCodecs.URLEncodedString(
+      whitespacePlus.replaceAllIn( URLEncoder.encode(unencoded, encoding), whiteSpaceEscape)
     )
-    override def toString = unencoded
+    override def toString: String = unencoded
   }
 
   implicit class URLEncodedString(val encodedString: String) extends AnyVal{
     def decode(implicit encoding: String): String = URLDecoder.decode(encodedString, encoding)
-    override def toString = encodedString
+    override def toString: String = encodedString
   }
 
   implicit def decodedString(encoded: URLEncodedString) : String = encoded.decode
-
 }
