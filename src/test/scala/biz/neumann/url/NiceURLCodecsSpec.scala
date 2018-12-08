@@ -20,7 +20,6 @@ class NiceURLCodecsSpec extends FunSpec with Matchers{
     EncodedDecoded("playa%20de%20palma","playa de palma"),
     EncodedDecoded("%CB%88bal%C9%90%CB%8Cman", "ˈbalɐˌman"),
     EncodedDecoded("%E1%BC%9C%CF%81%CF%89%CF%82", "Ἔρως")
-
   )
 
   describe("The nice URL Decoder") {
@@ -28,6 +27,11 @@ class NiceURLCodecsSpec extends FunSpec with Matchers{
       it(s"The encoded '$enc' should be decoded as '$dec'.") {
         enc.decode shouldEqual dec
       }
+    }
+
+    it("The toString method of notURLEncodedString returns teh not encoded string") {
+      val epos = "Ἔρως"
+      new NotURLEncodedString(epos).toString shouldEqual epos
     }
   }
 
@@ -37,6 +41,12 @@ class NiceURLCodecsSpec extends FunSpec with Matchers{
         dec.encode.encodedString shouldEqual URLEncodedString(enc).encodedString
       }
     }
+
+    it("has an implicit conversion that transforms an URLEncodedString to an unescaped String whenever it is used in place of a String") {
+      val ballamann = "ˈbalɐˌman"
+      implicitly[String](URLEncodedString(ballamann.encodedString)) shouldEqual(ballamann)
+    }
+
   }
 
   describe("The nice URL Codecs") {

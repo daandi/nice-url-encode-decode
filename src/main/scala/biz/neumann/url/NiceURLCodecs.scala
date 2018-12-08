@@ -14,11 +14,11 @@ object NiceURLCodecs {
   val whitespacePlus: Regex = "\\+".r
   val whiteSpaceEscape: String = "%20"
 
-  implicit class DecodedURLString(val unencoded: String) extends AnyVal{
+  implicit class NotURLEncodedString(val notEncoded: String) extends AnyVal{
     def encode(implicit encoding: String): URLEncodedString =  NiceURLCodecs.URLEncodedString(
-      whitespacePlus.replaceAllIn( URLEncoder.encode(unencoded, encoding), whiteSpaceEscape)
+      whitespacePlus.replaceAllIn( URLEncoder.encode(notEncoded, encoding), whiteSpaceEscape)
     )
-    override def toString: String = unencoded
+    override def toString: String = notEncoded
   }
 
   implicit class URLEncodedString(val encodedString: String) extends AnyVal{

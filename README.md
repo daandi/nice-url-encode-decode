@@ -3,7 +3,9 @@
 This library wants to put back the fun in working with URL-Encoded Strings.
 
 [![Travis](https://travis-ci.org/daandi/nice-url-encode-decode.svg?branch=master)](https://travis-ci.org/daandi/nice-url-encode-decode.svg?branch=master)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/777d4db9b275411881fadaba9c7da222)](https://www.codacy.com/app/andreas-neumann/nice-url-encode-decode)
+
 [![Coverage Status](https://coveralls.io/repos/github/daandi/nice-url-encode-decode/badge.svg?branch=master)](https://coveralls.io/github/daandi/nice-url-encode-decode?branch=master)
 
 # Adding to your project
