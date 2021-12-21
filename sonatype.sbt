@@ -2,7 +2,7 @@ sonatypeProfileName := "biz.neumann"
 
 publishMavenStyle := true
 
-publishArtifact in Test := false
+(Test / publishArtifact) := false
 
 pomIncludeRepository := { _ => false }
 
