@@ -1,14 +1,9 @@
 package biz.neumann.url
-import org.scalatest.{FunSpec, Matchers}
 import NiceURLCodecs._
-/**
-  * Andreas Neumann
-  * Email: andreas@neumann.biz
-  * Date: 08.07.16
-  * Time: 13:43
-  */
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class NiceURLCodecsSpec extends FunSpec with Matchers{
+class NiceURLCodecsSpec extends AnyFunSpec with Matchers{
   case class EncodedDecoded(encoded: String, decoded: String)
 
   val data : List[EncodedDecoded] = List(

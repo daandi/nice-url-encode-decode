@@ -1,9 +1,10 @@
 name := "nice-url-encode-decode"
+organization := "biz.neumann"
+version := "1.7"
+scalaVersion := "2.13.7"
+crossScalaVersions := Seq("2.12.5", "2.13.7")
 
-version := "1.6"
-
-scalaVersion := "2.12.8"
-
-crossScalaVersions := Seq("2.11.8", "2.12.8")
-
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.9" % "test"
+libraryDependencies ++= Seq(
+  "org.scala-lang" % "scala-reflect" % "2.12.15",
+  "org.scalatest" %% "scalatest" % "3.2.10" % "test"
+)
